@@ -13,7 +13,21 @@ export const metadata: Metadata = {
   title: "Onzi Labs — Product Designer & Developer",
   description:
     "Portfolio de Esteban Herrero. Product Designer & Full Stack Developer basado en Buenos Aires, Argentina.",
-};
+    icons: {
+      icon: [
+        { url: '/icon.svg', type: 'image/svg+xml' },
+      ],
+    },
+    openGraph: {
+      title: "Onzi Labs — Product Designer & Developer",
+      description:
+        "Portfolio de Esteban Herrero. Diseño y desarrollo de productos digitales de extremo a extremo.",
+      url: "https://onzi.dev",
+      siteName: "Onzi Labs",
+      locale: "es_AR",
+      type: "website",
+    },
+  };
 
 export default function RootLayout({
   children,
