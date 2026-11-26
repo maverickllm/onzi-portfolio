@@ -10,16 +10,8 @@ const projects = [
     description:
       "Plataforma integral de reservas y gestión para complejos de pádel. App móvil para usuarios y dashboard administrativo.",
     year: "2026",
-    link: "#", // Luego lo cambiamos por el link de Behance
+    link: "https://www.behance.net/gallery/258973379/Courtik-App-Dashboard-de-Gestion-Deportiva?platform=direct", 
   },
-  // Podés agregar más proyectos aquí en el futuro
-  // {
-  //   title: "Próximo Proyecto",
-  //   category: "Categoría",
-  //   description: "Descripción breve del proyecto.",
-  //   year: "2025",
-  //   link: "#",
-  // },
 ];
 
 export default function Projects() {
