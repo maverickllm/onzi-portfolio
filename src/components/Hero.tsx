@@ -17,10 +17,10 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-screen flex-col justify-between px-6 py-12 md:px-12 md:py-20">
+    <section className="relative flex min-h-screen flex-col justify-between px-6 pt-24 md:pt-32 pb-12 md:pb-20">
       {/* Pre-title */}
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-sm uppercase tracking-[0.3em] text-onzi-muted"
