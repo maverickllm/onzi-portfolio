@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --color-onzi-orange: #FF5A00;
   --color-onzi-dark: #18181B;
@@ -7,4 +11,8 @@
   --color-onzi-muted: #71717A;
   
   --font-montserrat: "Montserrat", sans-serif;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
 }

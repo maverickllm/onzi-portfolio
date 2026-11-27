@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const links = [
-  { name: "Behance", href: "https://www.behance.net/onzilabs" },
+  { name: "Behance", href: "https://www.behance.net/onzi" },
   { name: "LinkedIn", href: "https://www.linkedin.com/in/esteban-herrero-onzi" },
   { name: "GitHub", href: "https://github.com/maverickllm" },
-  { name: "Email", href: "mailto:onzi.labs@gmail.com" },
+  { name: "Email", href: "mailto:tu-email@ejemplo.com" },
 ];
 
 export default function Footer() {
@@ -25,13 +25,13 @@ export default function Footer() {
           <img
             src="/onzi-logo.svg"
             alt="Onzi Labs"
-            className="w-44 md:w-48 h-auto"
+            className="w-40 md:w-44 h-auto"
           />
         </motion.div>
 
-        {/* 2. CTA de contacto (reemplaza la firma redundante) */}
+        {/* 2. CTA de contacto */}
         <motion.a
-          href="mailto:onzi.labs@gmail.com"
+          href="mailto:tu-email@ejemplo.com"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -47,7 +47,7 @@ export default function Footer() {
           </span>
         </motion.a>
 
-        {/* 3. Links Grid */}
+        {/* 3. Links Grid (sin "Buenos Aires" suelto) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-white/10 pt-12">
           <div>
             <p className="text-onzi-muted text-sm uppercase tracking-widest mb-6">
@@ -68,23 +68,28 @@ export default function Footer() {
               ))}
             </div>
           </div>
+
+          {/* Columna derecha vacía (o podés poner algo útil después) */}
+          <div className="hidden md:block" />
         </div>
 
-        {/* 4. Bottom Bar with Status */}
+        {/* 4. Bottom Bar: Badge + Copyright + Ubicación */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-sm text-onzi-muted border-t border-white/10 pt-8">
-        <div className="flex items-center gap-4">
-            <p>© 2026 Onzi Labs. Todos los derechos reservados.</p>
-            <span className="hidden md:inline">·</span>
-            <p className="hidden md:block">Buenos Aires, Argentina</p>
-        </div>
-
-        <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full">
+          {/* Badge de estado */}
+          <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-full order-1 md:order-2">
             <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-onzi-orange opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-onzi-orange"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-onzi-orange opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-onzi-orange"></span>
             </span>
-            <span className="text-white font-medium">Disponible para proyectos</span>
-        </div>
+            <span className="text-white font-medium">Disponible para freelance</span>
+          </div>
+
+          {/* Copyright + Ubicación */}
+          <div className="flex items-center gap-4 order-2 md:order-1">
+            <p>© 2026 Onzi Labs. Todos los derechos reservados.</p>
+            <span className="hidden md:inline text-onzi-muted">·</span>
+            <p className="hidden md:block text-onzi-muted">Buenos Aires, Argentina</p>
+          </div>
         </div>
 
       </div>
